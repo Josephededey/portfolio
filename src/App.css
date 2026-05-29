@@ -129,7 +129,6 @@ a:focus::after {
   display: grid;
   grid-template-columns: 6fr 6fr;
   justify-content: space-between;
-  margin: auto;
   padding-left: 5%;
   padding-right: 5%;
   height: 70vh;
@@ -260,6 +259,23 @@ a:focus::after {
     top: 280px;
     width: 5rem;
     height: 5rem;
+  }
+}
+@keyframes balls-anim-responsive2 {
+  0% {
+    top: 200px;
+    width: 3rem;
+    height: 3rem;
+  }
+  50% {
+    top: 160px;
+    width: 4rem;
+    height: 4rem;
+  }
+  100% {
+    top: 200px;
+    width: 3rem;
+    height: 3rem;
   }
 }
 
@@ -838,7 +854,6 @@ a:focus::after {
     margin: 0 5%;
   }
   .skills {
-    justify-content: center;
     gap: 0.75rem;
     margin-bottom: 3rem;
   }
@@ -950,7 +965,7 @@ a:focus::after {
   .about-txt2,
   #contact .context,
   .skills {
-    margin: 0 1.25rem;
+    margin: 0 1.25%;
   }
   .skills {
     margin-bottom: 3rem;
@@ -1006,6 +1021,50 @@ a:focus::after {
   }
   .skills {
     gap: 6px;
+  }
+}
+
+@media (max-width: 370px) {
+  nav {
+    padding: 16px 4%;
+  }
+  .intro .t1 {
+    font-size: 1.4rem;
+  }
+  .intro .t2 {
+    font-size: 1.8rem;
+  }
+  .about-txt,
+  .about-txt2 {
+    font-size: 0.95rem;
+  }
+  .skills {
+    gap: 6px;
+  }
+  .b1 {
+    left: 10%;
+    animation: balls-anim-responsive2 5s ease infinite;
+  }
+  .b2 {
+    left: 34%;
+    animation: balls-anim-responsive2 4s ease infinite;
+  }
+  .b3 {
+    left: 59%;
+    animation: balls-anim-responsive2 3s ease infinite;
+  }
+  .b4 {
+    width: min(13rem, 100%);
+    height: min(13rem, 100%);
+    left: -25px;
+  }
+  .b4 img {
+    width: 97%;
+    height: min(26.6rem, 99%);
+  }
+  .intro-head {
+    margin-top: 2rem;
+    width: 90%;
   }
 }
 
