@@ -10,20 +10,22 @@ const Contact = () => {
     const [email,setEmail] = useState('');
     const [text,setText] = useState('');
     const handleSubmit = (e) => {
+        e.preventDefault();
         if (!name || !email || !text) {
             alert('Please fill in all fields before submitting the form.');
             return;
         }
-        e.preventDefault();
-        emailjs.sendForm('service_draw4tw', 'template_2g2aozy', e.target, 'WEsZ4UzQbaiMNN9pg')
+        const template = { name, email, message: text };
+        emailjs.send('service_draw4tw', 'template_2g2aozy', template, 'WEsZ4UzQbaiMNN9pg')
           .then((result) => {
               console.log(result.text);
               alert('Message sent successfully!');
-              setName(name);
-              setEmail(email);
-              setText(text);
-          }, (error) => {
-              console.log(error.text);
+              setName('');
+              setEmail('');
+              setText('');
+          })
+          .catch((error) => {
+              console.log(error.text || error);
               alert('Failed to send message. Please try again later.');
           });
     }
@@ -66,17 +68,17 @@ const Contact = () => {
                     </div>
                 </div>
                 <div className="part2">
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <div>
-                            <input type="text" value={name} placeholder="Your Name" onChange={(e) => setName(e.target.value)} />
+                            <input name='name' type="text" value={name} placeholder="Your Name" onChange={(e) => setName(e.target.value)} />
                         </div>
                         <div>
-                            <input type="email" value={email} placeholder="Your Email"  onChange={(e) => setEmail(e.target.value)} />
+                            <input name='email' type="email" value={email} placeholder="Your Email"  onChange={(e) => setEmail(e.target.value)} />
                         </div>
                         <div>
-                            <textarea placeholder="Write Your Message..." rows={7} value={text} onChange={(e) => setText(e.target.value)}></textarea>
+                            <textarea name='message' placeholder="Write Your Message..." rows={7} value={text} onChange={(e) => setText(e.target.value)}></textarea>
                         </div>
-                        <input onClick={handleSubmit} type="submit" value="Send" />
+                        <input type="submit" value="Send" />
                     </form>
                 </div>
             </div>
