@@ -71,7 +71,6 @@ nav button {
   height: 46px;
   padding: 0px 8px;
   padding-bottom: 6px;
-  margin: auto;
   display: none;
   transition: ease .5s;
 }
@@ -127,7 +126,6 @@ a:focus::after {
 /* INTRO */
 .intro {
   display: grid;
-  width: 100vw;
   grid-template-columns: 6fr 6fr;
   justify-content: space-between;
   padding-left: 5%;
@@ -173,8 +171,7 @@ a:focus::after {
   }
 }
 .intro-about {
-  margin-left: 3%;
-  margin-top: 2rem;
+  padding-top: 2rem;
   color: rgb(207, 207, 207);
   font-weight: 600;
 }
@@ -561,7 +558,6 @@ a:focus::after {
 }
 #contact {
   padding-top: 3rem;
-  position: relative;
   padding-bottom: 6rem;
 }
 #contact h2 {  
@@ -718,19 +714,7 @@ a:focus::after {
 @media (max-width: 1023px) {
   .navbar {
     grid-template-columns: 10fr 2fr;
-    padding: 20px 5%;
     transition: ease .5s;
-  }
-  .nav-expand {
-    display: grid;
-    grid-template-columns: 10fr 2fr;
-    transition: ease .5s;
-
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   }
   .ham-border {
     display: block;
@@ -785,10 +769,8 @@ a:focus::after {
     margin: 0 auto;
     margin-top: 3rem;
     position: relative;
-    width: 100%;
     height: 1px;
-    min-width: 360px;
-    position: relative;
+    min-width: 90%;
   }
   .b1,
   .b2,
@@ -898,9 +880,15 @@ a:focus::after {
   .footer {
     padding: 18px 5%;
   }
+  #contact input[type=text], #contact input[type=email], #contact textarea {
+    width: 95%;
+  }
 }
 
 @media (max-width: 767px) {
+  .navbar {
+    padding: 15px 5%;
+  }
   .intro .t1 {
     font-size: 1.6rem;
   }
@@ -955,6 +943,14 @@ a:focus::after {
   #about h4 {
     margin-left: 0;
   }
+  #contact .grid .part2 {
+    width: 88%;
+    padding: 0;
+    padding: 4% 4% 4% 4%;
+  }
+  #contact input[type=text], #contact input[type=email], #contact textarea {
+    width: 94%;
+  }
 }
 
 @media (max-width: 560px) {
@@ -1003,11 +999,42 @@ a:focus::after {
   #contact input[type=submit] {
     padding: 14px 20px;
   }
+  #contact input[type=text], #contact input[type=email], #contact textarea {
+    width: 91%;
+  }
+  .ham-border {
+    border: 1px solid rgb(19, 251, 255);
+    border-radius: 7px;
+    width: 46px;
+    height: 36px;
+    padding: 0px 8px;
+    padding-bottom: 6px;
+    transition: ease .5s;
+  }
+  .ham-line {
+    width: 26px;
+    margin-top: 6px;
+    border: 1px solid rgb(19, 251, 255);
+  }
+  .navbar {
+    margin: 0;
+  }
 }
 
 @media (max-width: 430px) {
-  nav {
-    padding: 16px 4%;
+  .logo1 {
+    word-spacing: -4px;
+    font-size: 21px;
+    font-weight: 800;
+  }
+  .logo2 {
+    word-spacing: -4px;
+    font-size: 21px;
+    font-weight: 800;
+  }
+  .navbar {
+    grid-template-columns: 9fr 3fr;
+    transition: ease .5s;
   }
   .intro .t1 {
     font-size: 1.4rem;
@@ -1022,11 +1049,14 @@ a:focus::after {
   .skills {
     gap: 6px;
   }
+  #contact input[type=text], #contact input[type=email], #contact textarea {
+    width: 90%;
+  }
 }
 
 @media (max-width: 370px) {
   nav {
-    padding: 16px 4%;
+    padding: 0px 4%;
   }
   .intro .t1 {
     font-size: 1.4rem;
@@ -1042,15 +1072,15 @@ a:focus::after {
     gap: 6px;
   }
   .b1 {
-    left: 10%;
+    left: 0%;
     animation: balls-anim-responsive2 5s ease infinite;
   }
   .b2 {
-    left: 34%;
+    left: 31%;
     animation: balls-anim-responsive2 4s ease infinite;
   }
   .b3 {
-    left: 59%;
+    left: 62%;
     animation: balls-anim-responsive2 3s ease infinite;
   }
   .b4 {
@@ -1065,6 +1095,59 @@ a:focus::after {
   .intro-head {
     margin-top: 2rem;
     width: 90%;
+  }
+  #contact .grid .part2 {
+    width: 88%;
+    padding: 0;
+    padding: 12px 6% 12px 4%;
+  }
+  .footer {
+    font-size: 10px;
+  }
+  .intro-anim {
+    margin-left: 14%;
+  }
+}
+@media (max-width: 320px) {
+  .b1 {
+    left: -13%;
+    animation: balls-anim-responsive2 5s ease infinite;
+  }
+  .b2 {
+    left: 25%;
+    animation: balls-anim-responsive2 4s ease infinite;
+  }
+  .b3 {
+    left: 62%;
+    animation: balls-anim-responsive2 3s ease infinite;
+  }
+  #contact .grid .part {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  #contact .grid .part2 {
+    width: 88%;
+    padding: 0;
+    padding: 12px 6% 12px 6%;
+  }
+  #contact input[type=text], #contact input[type=email], #contact textarea {
+    color: #ffffffc5;
+    width: 100%;
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+    border: 1px solid rgb(107, 107, 107);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: ease .5s;
+    resize: vertical;
+    padding: 0;
+  }
+  .intro-anim {
+    margin-left: 17%;
+  }
+  .footer {
+    font-size: 10px;
   }
 }
 

@@ -12,7 +12,7 @@ const Navbar = () => {
 
 
     return ( 
-      <nav className={`navbar ${mobileNav ? 'nav-expand' : ''}`}>
+      <nav className={`navbar`}>
         <div className="nav-txt">
           <span className='logo1'>I C E F O X</span> <span className='logo2'>D E V</span>
         </div>
