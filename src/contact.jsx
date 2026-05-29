@@ -2,6 +2,7 @@ import linkedin from "./assets/images/icons/linkedin.png";
 import emailic from "./assets/images/icons/email.png";
 import whatsapp from "./assets/images/icons/whatsapp.png";
 import phone from "./assets/images/icons/phone.png";
+import emailjs from '@emailjs/browser';
 import { useState } from 'react'
 
 const Contact = () => {
@@ -9,8 +10,22 @@ const Contact = () => {
     const [email,setEmail] = useState('');
     const [text,setText] = useState('');
     const handleSubmit = (e) => {
+        if (!name || !email || !text) {
+            alert('Please fill in all fields before submitting the form.');
+            return;
+        }
         e.preventDefault();
-        alert(`Submitted: ${name} - ${email} - ${text}`);
+        emailjs.sendForm('service_draw4tw', 'template_2g2aozy', e.target, 'WEsZ4UzQbaiMNN9pg')
+          .then((result) => {
+              console.log(result.text);
+              alert('Message sent successfully!');
+              setName(name);
+              setEmail(email);
+              setText(text);
+          }, (error) => {
+              console.log(error.text);
+              alert('Failed to send message. Please try again later.');
+          });
     }
 
     return ( 
