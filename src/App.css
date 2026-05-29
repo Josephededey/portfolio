@@ -127,12 +127,12 @@ a:focus::after {
 /* INTRO */
 .intro {
   display: grid;
+  width: 100vw;
   grid-template-columns: 6fr 6fr;
   justify-content: space-between;
   padding-left: 5%;
   padding-right: 5%;
   height: 70vh;
-  grid-row: auto;
 }
 .intro-head {
   margin-top: 6rem;
