@@ -25,7 +25,7 @@ const About = () => {
           <br></br>
           Created a simple box movement game where your box(player) has to avoid colliding with other boxes on a narrow path. I made use of screen interaction codes to detect which part of the mobile screen was tapped to control movement. Now I’ve upgraded the game from using a box to using an actual player and currently implementing parkour movements to the game to hence I named the game ‘CubeKour’. 
           <br/>
-          <button>Let's Talk</button>
+          <a href="#contact">Let's Talk</a>
           <br />
 
           

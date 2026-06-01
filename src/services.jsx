@@ -24,7 +24,7 @@ const MyServices = () => {
               <div className="service">
                 <img src={mobileapp} alt="mobile app development" width={30}/>
                 <div className='title'>Mobile App Development</div>
-                <div className='text'>Cross-platform monile apps for Android and iOS with clean, intuitive design, and reliable backend systems.<br/>
+                <div className='text'>Cross-platform mobile apps for Android and iOS with clean, intuitive design, and reliable backend systems.<br/>
                 Focused on performance, usability, and real-world functionality.</div>
               </div>  
             </div>
@@ -33,7 +33,7 @@ const MyServices = () => {
                 <img src={software} alt="software development" width={30}/>
                 <div className='title'>Software Development</div>
                 <div className='text'>Custom software solutions tailored to your business needs with integrated backend architectures.<br/>
-                  Built for automation and, efficiency, and long-term scalability.
+                  Built for automation, efficiency, and long-term scalability.
                 </div>
               </div>
               <div className="service">
