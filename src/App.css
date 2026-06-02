@@ -349,14 +349,13 @@ a:focus::after {
   background: linear-gradient(45deg, rgb(16, 216, 219),rgb(0, 131, 66));
   border: none;
   display: block;
-  padding: 1rem 2.7rem;
+  padding: 0.9rem 2.4rem;
   border-radius: 3rem;
   font-weight: 700;
   cursor: pointer;
   transition: ease-in-out .3s all;
   margin-top: 2rem;
   width: 70px;
-  height: 25px;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.849);
 }
@@ -388,6 +387,7 @@ a:focus::after {
   flex-wrap: wrap;
 }
 .skill {
+  color: #bbc4c4;
   border-radius: 26px;
   background-color: #ffffff0c;
   padding: 12px 18px;
@@ -864,9 +864,6 @@ a:focus::after {
   .project {
     padding: 24px;
   }
-  #contact .context {
-    margin: 0 5% 2rem;
-  }
   #contact .grid {
     gap: 4rem;
   }
@@ -937,11 +934,6 @@ a:focus::after {
   #contact .grid .part {
     margin-top: 2rem;
   }
-  .about-txt,
-  .about-txt2,
-  #contact .context {
-    margin: 0 3rem;
-  }
   #about h2 {
     margin-left: 5%;
   }
@@ -961,12 +953,6 @@ a:focus::after {
 @media (max-width: 560px) {
   nav a {
     font-size: 0.85rem;
-  }
-  .about-txt,
-  .about-txt2,
-  #contact .context,
-  .skills {
-    margin: 0 1.25%;
   }
   .skills {
     margin-bottom: 3rem;
